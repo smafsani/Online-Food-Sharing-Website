@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --black: #000;
+    --white: #fff;
+    --color1: #DC143C;
+    --color2: #DC143C;
+    --color3: #533e4a;
+    --color4: #5ebbab;
+    --bg: transparent;
+}
+.hide{
+    display: none;
+}
+.errorBx{
+    color: #f00;
+    font-size: 13px;
+    font-family: sans-serif;
+    margin-left: 20px;
+}
+.set-bold{
+    font-weight: bold;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.container .nav-bar{
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    background-color: var(--bg);
+    color: var(--color2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+}
+.container .nav-bar ul{
+    display: flex;
+    flex-direction: row;
+}
+.container .nav-bar ul li{
+    list-style: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.container .nav-bar ul li a{
+    text-decoration: none;
+    color: var(--color2);
+    font-size: 16px;
+    position: relative;
+    background-size: 0;
+}
+.container .nav-bar ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 2px;
+    bottom: -2px;
+    width: 100%;
+    border-bottom: 2px solid var(--color2);
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+.container .nav-bar ul li a:hover::after{
+    transform: scale(1, 1);
+}
+.container .nav-bar ul li #btn{
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--white);
+}
+#top-btn{
+    height: 35px;
+    width: 35px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #FFC2CE;
+    border: none;
+    outline: none;
+    border: 1px solid #DC62CC;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+.header-text{
+    font-family: 'Charm', sans-serif;
+    text-align:center;
+    color: var(--color1);
+    font-size: 10rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.container .contents{
+    margin-top: 100px;
+    width: 100%;
+}
+.container .contents .texts span{
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: var(--color3);
+}
+.container .contents .texts .two,
+.container .contents .texts .three{
+    background-size: 0;
+    position: relative;
+    background-color: var(--color3);
+}
+.container .contents .texts .three{
+    margin-top: -20px;
+    z-index: -1;
+}
+.container .contents .texts .two::before,
+.container .contents .texts .three::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 25px;
+    top: -8px;
+    border-radius: 10px;
+    background-color: var(--color3);
+} 
+
+.contents .texts .one{
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.contents .texts .two, .three{
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+.contents .buttons{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.contents .buttons button{
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid var(--color4);
+    margin: 5px 15px;
+    font-size: 16px;
+    background-color: var(--color4);
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 0 10px 2px #A2A2A2;
+    transition: all 0.3s ease;
+}
+.contents .buttons button:hover{
+    transform: scale(1.1);
+    background-color:transparent;
+}
+.contents .new_schedule{
+    margin-top: 40px;
+    width: 100%;
+    padding-bottom: 20px;
+    border: 1px solid #A2A2A2;
+}
+.contents .new_schedule h3{
+    text-align: center;
+    background-color: #36081a;
+    color: #fff;
+    padding: 5px 0;
+    margin-bottom: 30px;
+}
+.contents .new_schedule .cls{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.contents .new_schedule input, select{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    width: 230px;
+    padding: 5px;
+    margin-left: 20px;
+    outline: none;
+}
+.contents .new_schedule button{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    width: 230px;
+    padding: 10px 0;
+    margin: 10px 0 0 20px;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    border: 2px solid #36081a;
+    background-color: #36081a;
+    transition: all 0.3s ease;
+}
+.contents .new_schedule button:hover{
+    background-color: transparent;
+    color: #36081a;
+    font-weight: bold;
+}
+.contents .available_schedule{
+    margin-top: 50px;
+    border: 20px solid #C7F3EF;
+    padding: 10px;
+}
+.contents .available_schedule .table,
+.contents .available_schedule .search-bar{
+    border: 1px solid #A2A2A2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.contents .available_schedule .table .box,
+.contents .available_schedule .search-bar .box{
+    border: 1px solid #A2A2A2;
+    padding-bottom: 10px;
+    font-size: 14px;
+    background-color: #E0F3FF;
+    font-family: 'Roboto', sans-serif;
+}
+.contents .available_schedule .box .meeting-head,
+.contents .available_schedule .search-bar .box .meeting-head{
+    width: 100%;
+    background-color: #009B8B;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border: 1px solid #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.contents .available_schedule .box .meeting-body,
+.contents .available_schedule .search-bar .box .meeting-body{
+    width: 100%;
+    font-size: 14px;
+    padding-left: 5px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.custom{
+    text-align: right;
+    padding: 0 20px;
+}
+.custom-button{
+    cursor: pointer;
+    background-color: #33A2FF;
+    color: #fff;
+    padding: 2px 5px;
+    font: 'Roboto', sans-serif;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #B2B2B2;
+}
+
+.contents .available_schedule .search-head input,
+.contents .available_schedule .search-head button{
+    outline: none;
+    border: 1px solid #B2B2B2;
+    font-family: 'Roboto',sans-serif;
+    height: 20px;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 1px 3px;
+}
+.contents .available_schedule .search-head button{
+    background-color: #123A40;
+    cursor: pointer;
+    color: #fff;
+}

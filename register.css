@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --black: #000;
+    --white: #fff;
+    --color1: #DC143C;
+    --color2: rgb(80, 255, 109);
+}
+.set-crimson{
+    color: var(--color1);
+}
+/* LOGIN PAGE CSS */
+.reg-container{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.reg-container .title1{
+    position: absolute;
+    top: 40px;
+    left: 60px;
+}
+.reg-container .title1 h1{
+    color: #222;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-size: 34px;
+    text-decoration: none;
+}
+.reg-container form{
+    position: absolute;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px 2px #252525;
+    border-radius: 6px;
+    background-color: transparent;
+    width: 380px;
+    font-family: 'Roboto';
+    height: 545px;
+}
+.reg-container form h1{
+    text-align: center;
+    margin: 25px 0 10px 0;
+    color: var(--color1);
+}
+.reg-container form label{
+    color: var(#222);
+    margin: 15px 0 0 40px;
+}
+.reg-container form .passlc{
+    color: #222;
+    margin-right: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.reg-container form .passlc i{
+    font-size: 12px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.reg-container form input{
+    margin: 0 40px;
+    outline: none;
+    border: 1px solid #222;
+    border-radius: 6px;
+    height: 30px;
+    font-size: 14px;
+    padding: 0 10px;
+}
+.reg-container form button{
+    margin: 20px 60px 0 60px;
+    height: 35px;
+    border-radius: 20px;
+    color: var(--white);
+    font-size: 18px;
+    border: 2px solid var(--color1);
+    background-color: var(--color1);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.reg-container form button:hover{
+    color: var(--color1);
+    background-color: transparent;
+}
+.reg-container form p{
+    color: #222;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5px;
+}
+.reg-container form p a{
+    color: var(--color1);
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    transition: all 0.3s ease;
+}
+#hideit{
+    display: none;
+}
+#errorBox{
+    margin: 0 20px;
+    height: 16px;
+    padding: 2px 0 0 0;
+    color: #f00;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .reg-container .title1 h1{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 220px) {
+    .reg-container form{
+        font-size: 12px;
+        
+    }
+
+    .reg-container form input,
+    .reg-container form p,
+    .reg-container form button{
+        font-size: 12px;
+
+    }
+    .reg-container form button{
+        padding: 2px 5px;
+        width: 70px;
+        margin-left: 80px;
+    }
+    .reg-container form h1{
+        font-size: 14px;
+    }
+    
+}
+@media screen and (max-width: 170px) {
+    .reg-container form{
+        overflow: auto;
+    }
+    .reg-container form input,
+    .reg-container form label{
+        padding: 2px 3px;
+        margin-left: 60px;
+        width: 140px;
+    }
+    .reg-container form p{
+        margin-left: 20px;
+    }
+    .reg-container form h1{
+        font-size: 14px;
+    }
+    
+}

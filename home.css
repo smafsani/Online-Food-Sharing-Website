@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --black: #000;
+    --white: #fff;
+    --color1: #DC143C;
+    --color2: #DC143C;
+    --bg: transparent;
+}
+.hide{
+    display: none;
+}
+.set-bold{
+    font-weight: bold;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.container .nav-bar{
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    background-color: var(--bg);
+    color: var(--color2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .nav-bar ul{
+    display: flex;
+    flex-direction: row;
+}
+.container .nav-bar ul li{
+    list-style: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.container .nav-bar ul li a{
+    text-decoration: none;
+    color: var(--color2);
+    font-size: 16px;
+    position: relative;
+    background-size: 0;
+}
+.container .nav-bar ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 2px;
+    bottom: -2px;
+    width: 100%;
+    border-bottom: 2px solid var(--color2);
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+.container .nav-bar ul li a:hover::after{
+    transform: scale(1, 1);
+}
+.container .nav-bar ul li #btn{
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--white);
+}
+#top-btn{
+    height: 35px;
+    width: 35px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #FFC2CE;
+    border: none;
+    outline: none;
+    border: 1px solid #DC62CC;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+.container .content{
+    margin: 130px 0 0 40px;
+    width: 95%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.container .content img{
+    width: 50%;
+    height: 400px;
+    border-radius: 5px;
+}
+.container .content .texts{
+    width: 40%;
+    margin-left: 20px;
+}
+
+.donate-meet{
+    margin: 80px 40px;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.donate-meet .donate,
+.donate-meet .meet{
+    width: 48%;
+    padding: 30px;
+}
+.text-style1{
+    margin: 10px;
+    font-size: 20px;
+    color: var(--color1);
+}
+.text-style2{
+    font-size: 40px;
+    margin: 20px 10px;
+}
+.text-style3{
+    font-size: 14px;
+    margin: 20px 10px;
+    color: #646464;
+}
+.text-style4{
+    font-size: 22px; 
+    text-align: center;
+    word-spacing: 10px;
+    padding: 40px 40px;
+}
+.btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    background-color: var(--color1);
+    border: 2px solid #C20027;
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    color: var(--color1);
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: bold;
+}
+.about-title{
+    margin-bottom: 50px;
+}
+.about-title span{
+    color: var(--white);
+    background-color: var(--color1);
+    padding: 0 5px;
+    border-radius: 5px;
+}
+.about-us .texts .one{
+    font-size: 34px; 
+    text-align: center; 
+    margin-top: 40px;
+}
+.cards{
+    margin: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cards .card{
+    width: 31%;
+    height: auto;
+    min-height: 390px;
+    text-align: center;
+    box-shadow: 0 0 10px 2px #8F8F8F;
+    transition: all 0.3s ease;
+}
+.cards .card:hover{
+    box-shadow: 0 0 10px 2px #000;
+}
+.cards .card .card-head{
+    font-size: 26px;
+}
+.cards .card .card-body{
+    padding: 30px 10px;
+    font-size: 16px;
+    color: #7F7F7F;
+}
+.cards .card .icon{
+    width: 80px;
+    height: auto;
+    margin: 20px;
+}

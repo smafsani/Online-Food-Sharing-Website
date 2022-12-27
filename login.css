@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;700&family=Roboto:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --black: #000;
+    --white: #fff;
+    --color1: #DC143C;
+    --color2: rgb(80, 255, 109);
+}
+.set-crimson{
+    color: var(--color1);
+}
+/* LOGIN PAGE CSS */
+.container{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.container .title1{
+    position: absolute;
+    top: 40px;
+    left: 60px;
+}
+.container .title1 h1{
+    color: #222;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-size: 34px;
+    text-decoration: none;
+}
+.container form{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px 2px #252525;
+    border-radius: 6px;
+    background-color: transparent;
+    width: 380px;
+    font-family: 'Roboto';
+    height: 400px;
+}
+.container form h1{
+    text-align: center;
+    margin: 30px 0;
+    color: var(--color1);
+}
+.container form label{
+    color: var(#222);
+    margin: 15px 0 0 40px;
+}
+.container form .passlc{
+    color: #222;
+    margin-right: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container form .passlc i{
+    font-size: 12px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.container form input{
+    margin: 0 40px;
+    outline: none;
+    border: 1px solid #222;
+    border-radius: 6px;
+    height: 30px;
+    font-size: 14px;
+    padding: 0 10px;
+}
+.container form button{
+    margin: 20px 60px 0 60px;
+    height: 35px;
+    border-radius: 20px;
+    color: var(--white);
+    font-size: 18px;
+    border: 2px solid var(--color1);
+    background-color: var(--color1);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.container form button:hover{
+    color: var(--color1);
+    background-color: transparent;
+}
+.container form p{
+    color: #222;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5px;
+}
+.container form p a{
+    color: var(--color1);
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    transition: all 0.3s ease;
+}
+.container form #errorBox{
+    margin: 0 40px;
+    height: 20px;
+    padding: 2px 0;
+    color: #f00;
+    font-size: 12px;
+    text-align: center;
+}

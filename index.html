@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to FoodShare</title>
+    <link rel="stylesheet" href="index_style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html"><h1><span id="t1">F</span><span id="t2">o</span><span id="t3">o</span><span id="t4">d</span><span id="t5">S</span><span id="t6">h</span><span id="t7">a</span><span id="t8">r</span><span id="t9">e</span></h1></a>
+        </nav>
+
+        <div class="description">
+            <div class="part1">
+                <p class="text-type1">Welcome to FoodShare</p>
+                
+                <span>Best platform to share your food from home.</span>
+                <span>Let's Share Foods.</span>
+                <span>We are here at your service.</span>
+                <div class="buttons">
+                    <a href="login.php">Sign In</a>
+                    <a href="register.php">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        const t_id = ["t1","t2","t3","t4",
+                    "t5","t6","t7","t8","t9"];
+        let count = 0;
+        let index = 0;
+        let currentId = '';
+        (function type(){
+            for(var i=0; i<count; i++){
+                document.getElementById(t_id[i]).classList.remove("set-crimson");
+            }
+            if(count === t_id.length){
+                count = 0;
+            }
+            currentId = t_id[count];
+            document.getElementById(currentId).classList.add("set-crimson");
+            count++;
+                    
+            setTimeout(type, 800);
+        }());
+
+    </script>
+</body>
+</html>

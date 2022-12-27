@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --black: #000;
+    --white: #fff;
+    --color1: #DC143C;
+    --color2: #DC143C;
+    --bg: transparent;
+}
+.hide{
+    display: none;
+}
+.set-bold{
+    font-weight: bold;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.container .nav-bar{
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    background-color: var(--bg);
+    color: var(--color2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .nav-bar ul{
+    display: flex;
+    flex-direction: row;
+}
+.container .nav-bar ul li{
+    list-style: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.container .nav-bar ul li a{
+    text-decoration: none;
+    color: var(--color2);
+    font-size: 16px;
+    position: relative;
+    background-size: 0;
+}
+.container .nav-bar ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 2px;
+    bottom: -2px;
+    width: 100%;
+    border-bottom: 2px solid var(--color2);
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+.container .nav-bar ul li a:hover::after{
+    transform: scale(1, 1);
+}
+.container .nav-bar ul li #btn{
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--white);
+}
+.inp{
+    width: 250px;
+    margin-left:10px;
+}
+#top-btn{
+    height: 35px;
+    width: 35px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #FFC2CE;
+    border: none;
+    outline: none;
+    border: 1px solid #DC62CC;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+.common-button{
+    background-color: var(--color1);
+    padding: 1px 10px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 2px solid var(--color1);
+    transition: all 0.3s ease;
+}
+.common-button:hover{
+    color: var(--color1);
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+}
+.use-btn{
+    font-size: 15px;
+    margin-left: 2px;
+    color: var(--color1);
+    background-color: transparent;
+    text-decoration: underline;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.newbutton{
+    margin-top: 80px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.contents .buttons{
+    border-bottom: 1px solid #A2A2A2;
+    margin-bottom: 10px;
+}
+.contents .users-information table,
+.contents .media-information table,
+.contents .otp-information table,
+.contents .grp-information table,
+.contents .meet-information table{
+    width: 100%;
+}
+.contents .users-information table, tr, td, th{            
+    text-align: center;
+    border: 1px solid #323232;
+    border-collapse: collapse;
+    height: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.contents .otp-information table, tr, td, th{            
+    text-align: center;
+    border: 1px solid #323232;
+    border-collapse: collapse;
+    height: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.contents .media-information table, tr, td, th{            
+    text-align: center;
+    border: 1px solid #323232;
+    border-collapse: collapse;
+    height: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.contents .meet-information table, tr, td, th{            
+    text-align: center;
+    border: 1px solid #323232;
+    border-collapse: collapse;
+    height: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.contents .grp-information table, tr, td, th{            
+    text-align: center;
+    border: 1px solid #323232;
+    border-collapse: collapse;
+    height: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.contents .users-information table tr th,
+.contents .media-information table tr th,
+.contents .otp-information table tr th,
+.contents .grp-information table tr th,
+.contents .meet-information table tr th{
+    background-color: #790d23;
+    color: #fff;
+    border-color: #fff;
+}
+.contents .users-information h3,
+.contents .media-information h3,
+.contents .otp-information h3,
+.contents .grp-information h3,
+.contents .meet-information h3{
+    margin-left: 10px;
+    color: #C20037;
+}
+.contents .users-information .cls,
+.contents .media-information .cls,
+.contents .otp-information .cls,
+.contents .meet-information .cls{
+    margin: 10px 0 0 10px;
+    font-size: 14px;
+}
+.contents .users-information .inp,
+.contents .media-information .inp,
+.contents .otp-information .inp,
+.contents .meet-information .inp{
+    outline: none;
+    border: 1px solid #A2A2A2;
+    height: 30px;
+}
+.contents .users-information .btn,
+.contents .media-information .btn,
+.contents .otp-information .btn,
+.contents .meet-information .btn{
+    width: 250px;
+    text-align: center;
+    margin-top: 20px;           
+}
+.border_right{
+    background-color: #DAAC;
+    border-right: 2px solid #A2A2A2;
+}
+.border_left{
+    background-color: #DAAC;
+    border-left: 2px solid #A2A2A2;
+}
+tr:nth-child(odd){background-color: #fcd8FF;}
+.header1{
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #790d23;
+    color: #fff;
+    padding: 10px 0;
+}
